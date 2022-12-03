@@ -1,4 +1,4 @@
-with open('data_day1_1_test.txt') as f:
+with open('data_day1_1.txt') as f:
     lines = f.readlines()
 
 
