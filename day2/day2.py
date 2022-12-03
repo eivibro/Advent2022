@@ -4,7 +4,6 @@ with open('input.txt') as f:
 scores = {'X': 1, 'Y': 2, 'Z': 3}
 
 def day2_1():
-    scores = {'X': 1, 'Y': 2, 'Z': 3}
     total = 0
     for l in lines:
         total += scores[l[2]] 
@@ -27,7 +26,6 @@ def day2_1():
                   
                   
 def day2_2():
-    scores = {'X': 1, 'Y': 2, 'Z': 3}
     total = 0
     choice = '' 
     for l in lines:
@@ -52,17 +50,14 @@ def day2_2():
 
 
 def choose(line):
-    choice = ''
-    letter_l = line[0]
-    letter_r = line[2]
     letters = ['X', 'Y', 'Z']
     position = {'A': 0, 'B': 1, 'C': 2}
-    if letter_r == 'X':
-        return(letters[(position[letter_l]+2)%3])
-    elif letter_r == 'Y':
-        return(letters[(position[letter_l])])
-    elif letter_r == 'Z':
-        return(letters[(position[letter_l]+1)%3])
+    if line[2] == 'X':
+        return(letters[(position[line[0]]+2)%3])
+    elif line[2] == 'Y':
+        return(letters[(position[line[0]])])
+    elif line[2] == 'Z':
+        return(letters[(position[line[0]]+1)%3])
 
 
 day2_2()
